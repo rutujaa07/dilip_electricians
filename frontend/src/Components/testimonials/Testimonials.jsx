@@ -1,136 +1,141 @@
-import React, { useState, useEffect } from "react";
-import "./Testimonials.css";
+import React, { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Testimonials.css';
+import image from "../../assets/user.jpg"
 
-function TestimonialSlider() {
-  const [activeSlide, setActiveSlide] = useState(0);
 
+const EnhancedTestimonialSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+  
   const testimonials = [
     {
       id: 1,
-      name: "Mark Wood",
-      position: "CEO, Buzicon",
-      image: "https://picsum.photos/id/1012/150/150",
-      rating: 5,
-      text: "I feel very happy and proud to connect with this industry. Super productive experience.",
+      name: "John Smith",
+      position: "Homeowner",
+      image: image,
+      text: "Dilip Electricals provided exceptional service for our home rewiring project. The team was professional, punctual, and the quality of work exceeded our expectations."
     },
     {
       id: 2,
-      name: "Sarah Lee",
-      position: "CTO, Innovatech",
-      image: "https://picsum.photos/id/1020/150/150",
-      rating: 5,
-      text: "Exceptional service! Reliable and efficient in every way.",
+      name: "Sarah Johnson",
+      position: "Business Manager",
+      image: image,
+      text: "We hired Dilip Electricals for our office renovation and they delivered excellent results. Their attention to detail and commitment to safety standards was impressive."
     },
     {
       id: 3,
-      name: "James Brown",
-      position: "Manager, ElectraCo",
-      image: "https://picsum.photos/id/1025/150/150",
-      rating: 5,
-      text: "Truly professional team. Delivered everything as promised.",
+      name: "Rajesh Patel",
+      position: "Property Developer",
+      image: image,
+      text: "Working with Dilip Electricals on our commercial development was a great experience. Their team handled complex electrical installations with expertise and efficiency."
     },
     {
       id: 4,
-      name: "Lisa Ray",
-      position: "Founder, BrightVolt",
-      image: "https://picsum.photos/id/1005/150/150",
-      rating: 5,
-      text: "Great attention to detail. We were in good hands.",
+      name: "Priya Sharma",
+      position: "Restaurant Owner",
+      image: image,
+      text: "The team at Dilip Electricals helped us upgrade our electrical systems quickly and within budget. Their professional approach and quality work has earned our trust."
     },
     {
       id: 5,
-      name: "David Smith",
-      position: "Engineer, PowerGrid",
-      image: "https://picsum.photos/id/1011/150/150",
-      rating: 5,
-      text: "Fast, cost-effective, and dependable. What more could we ask?",
-    },
+      name: "Michael Davies",
+      position: "Factory Manager",
+      image: image,
+      text: "For industrial electrical solutions, I highly recommend Dilip Electricals. They understand the complexities of industrial requirements and deliver reliable systems."
+    }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveSlide((prev) =>
-        prev + 3 >= testimonials.length ? 0 : prev + 1
-      );
-    }, 5000);
-
+      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  const handleDotClick = (index) => {
-    setActiveSlide(index);
+  const getVisibleTestimonials = () => {
+    let result = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (activeIndex + i) % testimonials.length;
+      result.push({
+        ...testimonials[index],
+        position: i
+      });
+    }
+    return result;
   };
 
   return (
-    <section className="testimonial-section">
-      <div className="testimonial-container">
-        <div className="testimonial-header">
-          <div className="icon-header">
-            <div className="testimonial-icon">
-              <img
-                src="/assets/user-icon.png"
-                alt="User Icon"
-                className="user-icon"
-              />
-            </div>
-            <h3 className="testimonial-subtitle">OUR TESTIMONIALS</h3>
+    <div className="testimonial-section">
+      <Container>
+      <div
+            className={`section-header ${
+              isVisible ? "fade-in visible" : "fade-in"
+            }`}
+          >
+            <h2>Client Testimonials</h2>
+            <p>What our clients say about our electrical services</p>
+            <div className="section-underline"></div>
           </div>
-          <h2 className="testimonial-title">
-            Professional, Reliable
-            <br /> & Cost Effective
-          </h2>
-        </div>
-
-        <div className="testimonial-slider">
+        <div className="testimonial-carousel">
           <div className="testimonial-track">
-            {testimonials
-              .slice(activeSlide, activeSlide + 3)
-              .map((testimonial) => (
-                <div key={testimonial.id} className="testimonial-card">
-                  <div className="testimonial-avatar-container">
-                    <div className="avatar-circle">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="avatar-image"
-                      />
+            {getVisibleTestimonials().map((testimonial) => (
+              <div 
+                key={testimonial.id} 
+                className={`testimonial-card position-${testimonial.position}`}
+              >
+                <div className="testimonial-card-inner">
+                  <div className="testimonial-quote">
+                    <span className="quote-icon">❝</span>
+                    <p>{testimonial.text}</p>
+                  </div>
+                  <div className="testimonial-footer">
+                    <div className="testimonial-avatar">
+                      <img src={testimonial.image} alt={testimonial.name} />
+                    </div>
+                    <div className="testimonial-info">
+                      <h5>{testimonial.name}</h5>
+                      <span>{testimonial.position}</span>
+                    </div>
+                    <div className="testimonial-rating">
+                      <span>★★★★★</span>
                     </div>
                   </div>
-                  <h4 className="service-rating">Great Service</h4>
-                  <div className="rating">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="star">
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <p className="testimonial-text">{testimonial.text}</p>
-                  <div className="testimonial-author">
-                    <strong>{testimonial.name}</strong>
-                    <span className="author-position">
-                      {testimonial.position}
-                    </span>
-                  </div>
                 </div>
-              ))}
-          </div>
-
-          <div className="slider-dots">
-            {Array.from({ length: testimonials.length - 2 }).map((_, index) => (
-              <button
-                key={index}
-                className={`slider-dot ${
-                  index === activeSlide ? "active" : ""
-                }`}
-                onClick={() => handleDotClick(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+              </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+        
+        <div className="testimonial-controls">
+          <div className="testimonial-arrows">
+            <button 
+              className="arrow-prev" 
+              onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}
+            >
+              &#10094;
+            </button>
+            <div className="testimonial-indicators">
+              {testimonials.map((_, index) => (
+                <button 
+                  key={index}
+                  className={`indicator ${index === activeIndex ? 'active' : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                />
+              ))}
+            </div>
+            <button 
+              className="arrow-next" 
+              onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </Container>
+    </div>
   );
-}
+};
 
-export default TestimonialSlider;
+export default EnhancedTestimonialSlider;

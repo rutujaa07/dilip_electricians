@@ -1,188 +1,95 @@
 import React from "react";
-import "./aboutus.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import './AboutSection.css';
 import image from "../../assets/ee.jpg";
 
-// Icons imported as SVG components
-const HouseIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3" y="9" width="18" height="12" rx="1" />
-    <path d="M9 22v-4h6v4" />
-    <path d="M10 2L2 9h20l-8-7z" />
-  </svg>
-);
-
-const PanelIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3" y="4" width="18" height="16" rx="2" />
-    <line x1="9" y1="4" x2="9" y2="20" />
-    <line x1="15" y1="4" x2="15" y2="20" />
-    <line x1="3" y1="9" x2="21" y2="9" />
-    <line x1="3" y1="15" x2="21" y2="15" />
-  </svg>
-);
-
-const AcIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M4 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3z" />
-    <path d="M7 16h10" />
-    <path d="M7 16v4" />
-    <path d="M17 16v4" />
-    <path d="M10 10v3" />
-    <path d="M14 10v3" />
-  </svg>
-);
-
-const ChevronDownIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="6 9 12 15 18 9"></polyline>
-  </svg>
-);
-
-function ServicesSection() {
+function AboutSection() {
   return (
-    <section className="services-section">
-      <div className="services-header">
-        <div className="icon-header">
-          <div className="worker-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M12 2a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5z" />
-              <path d="M12 12c3.31 0 6 1.34 6 3v2H6v-2c0-1.66 2.69-3 6-3z" />
-            </svg>
-          </div>
-          <h3 className="services-subtitle">WHAT WE DO</h3>
-        </div>
-        <h2 className="services-title">
-          We Offer Cost Efficient
-          <br />
-          Electrical Services
-        </h2>
+    <>
+      {" "}
+      <div
+        className="about-content"
+         
+      >
+        <h2>About Dilip Electrical & Contractor</h2>
+        <div className="section-underline" style={{ marginLeft: "55px" }}></div>
       </div>
+      <div className="container py-5" style={{ marginTop: "60px" }}>
+        <div className="row align-items-center">
+          <div className="col-md-5 text-center">
+            <img
+              src={image}
+              alt="Electrician at work"
+              className="img-fluid border"
+            />
+            <div className="bg-primary text-white p-3 mt-3 w-75 mx-auto">
+              <h4 className="mb-0">A-Class Contractor</h4>
+              <small>Safety and Precision Guaranteed</small>
+            </div>
+          </div>
+          <div className="col-md-7">
+            <p className="text-uppercase text-primary small mb-1">
+              Discover Dilip Electricals
+            </p>
+            <h2 className="fw-bold">
+              Your Trusted Partner for High-Voltage Solutions
+            </h2>
+            <hr className="border border-primary border-2 opacity-100 w-50 mb-3" />
+            <p className="text-secondary">
+              Specializing in high-voltage electrical services, Dilip
+              Electricals is dedicated to providing top-tier solutions for
+              industrial and commercial projects. Our expertise in cable
+              jointing, transformer installations, and both overhead and
+              underground electrical works ensures that your infrastructure is
+              built with precision and safety at the forefront. Our A-Class
+              Government License is a testament to our commitment to quality in
+              every project.
+            </p>
 
-      <div className="services-cards">
-        <div className="service-card">
-          <div className="card-image">
-            <img src={image} alt="House Maintenance" />
-            <div className="read-more">
-              <span>READ MORE</span>
-              <div className="arrow-icon">
-                <ChevronDownIcon />
+            <div className="row mt-4">
+              <div className="col-md-6 d-flex">
+                <div className="me-3">
+                  <div
+                    className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center"
+                    style={{ width: "40px", height: "40px" }}
+                  >
+                    ✔
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-1">Quality Assurance</h6>
+                  <small className="text-muted">
+                    Our certified team adheres to stringent quality standards
+                    ensuring reliable and efficient electrical installations.
+                  </small>
+                </div>
+              </div>
+
+              <div className="col-md-6 d-flex mt-3 mt-md-0">
+                <div className="me-3">
+                  <div
+                    className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center"
+                    style={{ width: "40px", height: "40px" }}
+                  >
+                    ⏰
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-1">Timely Delivery</h6>
+                  <small className="text-muted">
+                    We value your time and ensure that every project is
+                    completed promptly without compromising quality.
+                  </small>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card-content">
-            <div className="icon-box">
-              <HouseIcon />
-            </div>
-            <div className="service-info">
-              <h3>House</h3>
-              <h3>Maintenance</h3>
-            </div>
-            <div className="chevron-pattern">
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-            </div>
-          </div>
-        </div>
 
-        <div className="service-card">
-          <div className="card-image">
-            <img src={image} alt="Electric Panel Repair" />
-            <div className="read-more">
-              <span>READ MORE</span>
-              <div className="arrow-icon">
-                <ChevronDownIcon />
-              </div>
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="icon-box">
-              <PanelIcon />
-            </div>
-            <div className="service-info">
-              <h3>Electric</h3>
-              <h3>Panel Repair</h3>
-            </div>
-            <div className="chevron-pattern">
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <div className="card-image">
-            <img src={image} alt="Air Conditioning" />
-            <div className="read-more">
-              <span>READ MORE</span>
-              <div className="arrow-icon">
-                <ChevronDownIcon />
-              </div>
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="icon-box">
-              <AcIcon />
-            </div>
-            <div className="service-info">
-              <h3>Air</h3>
-              <h3>Conditioning</h3>
-            </div>
-            <div className="chevron-pattern">
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-              <div className="chevron"></div>
-            </div>
+            <button className="btn btn-primary mt-4">Contact Us Today</button>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
-export default ServicesSection;
+export default AboutSection;

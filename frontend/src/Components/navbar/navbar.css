@@ -1,10 +1,15 @@
 .navbar {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  z-index: 100;
-  position: sticky;
+  z-index: 1030; /* Increased z-index */
+  position: fixed; /* Changed from sticky to fixed for more consistent behavior */
   top: 0;
+  left: 0;
+  right: 0; /* Make sure it spans the full width */
   background-color: #fff;
+  transition: background-color 0.3s ease; /* Smooth transition for any changes */
 }
+
+/* The rest of your navbar styles remain the same */
 
 .navbar-brand {
   font-weight: bold;
@@ -16,19 +21,30 @@
   color: #007bff; /* You can change this to match your theme */
 }
 
-.nav-link {
+.navlink {
   margin-right: 1rem;
   font-weight: 500;
   color: #555 !important;
   transition: all 0.2s ease;
 }
 
-.nav-link:hover {
+.navlink:hover {
   color: #007bff !important;
   text-decoration: underline;
 }
+.navbar {
+  background-color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  z-index: 999;
+}
 
-.nav-link.active {
+.navbar-scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.navlink.active {
   color: #007bff !important;
   border-bottom: 2px solid #007bff;
 }

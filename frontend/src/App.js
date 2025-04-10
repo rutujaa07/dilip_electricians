@@ -19,7 +19,7 @@ const App = () => {
         {/* Add more routes here when needed */}
         <Route path="/about" element={<AboutSection />} />{" "}
         <Route path="/projects" />
-        <Route path="/contact" element={<DilipElectricalServices />} />{" "}
+        <Route path="/contact" element={<Contact />} />{" "}
       </Routes>
       <Footer/>
     </Router>

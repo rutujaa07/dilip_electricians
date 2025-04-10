@@ -20,7 +20,7 @@ function AboutSection() {
           <img src={drillIcon} alt="Drill tool" className="drill-icon" />
         </div>
 
-        <div className="about-content">
+        <div className="about-contentt">
           <div className="who-we-are">
             <div className="icon-header">
               <div className="worker-icon-container">

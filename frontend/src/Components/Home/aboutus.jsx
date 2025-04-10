@@ -1,19 +1,49 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import './AboutSection.css';
+import "./aboutus.css";
 import image from "../../assets/ee.jpg";
+import slider2 from "../../assets/slider2.jpg";
 
 function AboutSection() {
+  const features = [
+    "A-Class Government Licensed Contractors",
+    "Specialized in HT/LT Installations",
+    "MSEDCL Approved Vendor",
+    "Safety-First Approach",
+    "24/7 Emergency Support",
+  ];
   return (
     <>
-      {" "}
+      {/* Hero Header */}
       <div
-        className="about-content"
-         
+        className="services-hero"
+        style={{
+          backgroundImage: `linear-gradient(rgba(214, 201, 201, 0.7), rgba(109, 105, 105, 0.7)), url(${slider2})`,
+        }}
       >
+        <div className="hero-content">
+          <span className="hero-badge">EXPERTISE YOU CAN TRUST</span>
+          <h1>Powering Your Business With Excellence</h1>
+          <p>
+            Comprehensive electrical solutions designed for industrial and
+            commercial applications
+          </p>
+
+          <div className="hero-features">
+            {features.map((feature, index) => (
+              <div key={index} className="feature-badge">
+                <span className="feature-icon">✓</span> {feature}
+              </div>
+            ))}
+          </div>
+
+          <button className="hero-cta">Consult Our Experts</button>
+        </div>
+      </div>
+      {/* <div>
         <h2>About Dilip Electrical & Contractor</h2>
         <div className="section-underline" style={{ marginLeft: "55px" }}></div>
-      </div>
+      </div> */}
       <div className="container py-5" style={{ marginTop: "60px" }}>
         <div className="row align-items-center">
           <div className="col-md-5 text-center">

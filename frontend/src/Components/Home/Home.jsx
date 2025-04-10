@@ -14,9 +14,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import AboutSection from "./aboutus";
 import Services from "../services/Services";
+import image from "../../assets/ee.jpg"
 import ContactForm from "../contact/Contact";
 import TestimonialSlider from "../testimonials/Testimonials";
 import { NavLink } from "react-router-dom";
+import Certificates from "../certificates/Certificates";
 function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -357,123 +359,39 @@ function Home() {
           </div>
         </Container>
       </section>
+        <div className=" quality-section">
+              <div className="quality-content">
+                <div className="quality-text">
+                  <h2 className="section-title">Our Quality Commitment</h2>
+                  <div className="quality-points">
+                    <div className="quality-point">
+                      <h3>Premium Materials</h3>
+                      <p>We use only ISI-certified cables, components, and accessories to ensure longevity and performance.</p>
+                    </div>
+                    <div className="quality-point">
+                      <h3>Expert Workmanship</h3>
+                      <p>Our technicians undergo rigorous training and certification to maintain the highest standards of installation.</p>
+                    </div>
+                    <div className="quality-point">
+                      <h3>Thorough Testing</h3>
+                      <p>Every connection, joint, and system undergoes comprehensive testing before commissioning.</p>
+                    </div>
+                    <div className="quality-point">
+                      <h3>Regulatory Compliance</h3>
+                      <p>All our work strictly adheres to the latest electrical codes and safety regulations.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="quality-image-container">
+                  <img src={image} alt="Quality inspection" className="quality-image" />
+                </div>
+              </div>
+            </div>
       <TestimonialSlider />
-
+ {/* NEW SECTION: Certifications */}
+    <Certificates/>
       {/* <ContactForm/> */}
-      <section id="contact" className="contact-section">
-        <Container>
-          <Row>
-            <Col lg={6} className="mb-4 mb-lg-0">
-              <div
-                className={`contact-info ${
-                  isVisible ? "slide-in-left visible" : "slide-in-left"
-                }`}
-              >
-                <h2>Get In Touch</h2>
-                <div className="section-underline"></div>
-                <p>Have a question or need a quote? Contact us today!</p>
-
-                <div className="contact-details">
-                  <div className="contact-item">
-                    <div className="contact-icon">📍</div>
-                    <div>
-                      <h4>Office Address</h4>
-                      <p>
-                        Office no. 109 Boke Plaza, Nashik-Pune Road, Dwarka,
-                        Nashik, Maharashtra, Pin 422011
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="contact-item">
-                    <div className="contact-icon">📱</div>
-                    <div>
-                      <h4>Phone Number</h4>
-                      <p>7875688111</p>
-                    </div>
-                  </div>
-
-                  <div className="contact-item">
-                    <div className="contact-icon">✉️</div>
-                    <div>
-                      <h4>Email Address</h4>
-                      <p>dilipdharak@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="social-links mt-4">
-                  <a href="#" className="social-icon facebook">
-                    f
-                  </a>
-                  <a href="#" className="social-icon instagram">
-                    i
-                  </a>
-                  <a href="#" className="social-icon linkedin">
-                    l
-                  </a>
-                  <a href="#" className="social-icon whatsapp">
-                    w
-                  </a>
-                </div>
-              </div>
-            </Col>
-            <Col lg={6}>
-              <div
-                className={`contact-form-wrapper ${
-                  isVisible ? "slide-in-right visible" : "slide-in-right"
-                }`}
-              >
-                <div className="contact-form">
-                  <h3>Request A Quote</h3>
-                  <Form>
-                    <Row>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Control type="text" placeholder="Your Name" />
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Control type="email" placeholder="Your Email" />
-                        </Form.Group>
-                      </Col>
-                    </Row>
-                    <Form.Group className="mb-3">
-                      <Form.Control type="tel" placeholder="Your Phone" />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                      <Form.Select>
-                        <option>Select Service</option>
-                        <option>Residential Electrical</option>
-                        <option>Commercial Electrical</option>
-                        <option>Industrial Installation</option>
-                        <option>L.T./H.T. Work</option>
-                        <option>Underground Wiring</option>
-                        <option>M.S.E.D.C.L. Work</option>
-                      </Form.Select>
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                      <Form.Control
-                        as="textarea"
-                        rows={4}
-                        placeholder="Your Message"
-                      />
-                    </Form.Group>
-                    <Button
-                      variant="primary"
-                      type="submit"
-                      className="w-100 submit-btn"
-                    >
-                      Send Request
-                    </Button>
-                  </Form>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+     
 
       <div className="cta-section">
         <Container>
@@ -491,98 +409,7 @@ function Home() {
         </Container>
       </div>
 
-      <footer className="site-footer">
-        <Container>
-          <Row className="mb-5">
-            <Col lg={4} className="mb-4 mb-lg-0">
-              <div className="footer-brand d-flex align-items-center">
-                <div className="footer-logo">DE</div>
-                <div className="footer-brand-text">
-                  <h4>Dilip Electrical</h4>
-                  <p>& Contractor</p>
-                </div>
-              </div>
-              <p className="mt-3">
-                Class 'A' Government Licensed Electrical Contractor providing
-                quality electrical services since 2010.
-              </p>
-              <div className="footer-social mt-4">
-                <a href="#">f</a>
-                <a href="#">i</a>
-                <a href="#">l</a>
-                <a href="#">w</a>
-              </div>
-            </Col>
-            <Col sm={6} lg={2} className="mb-4 mb-lg-0">
-              <h5>Quick Links</h5>
-              <ul className="footer-links">
-                <li>
-                  <a href="#home">Home</a>
-                </li>
-                <li>
-                  <a href="#about">About Us</a>
-                </li>
-                <li>
-                  <a href="#services">Services</a>
-                </li>
-                <li>
-                  <a href="#projects">Projects</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </Col>
-            <Col sm={6} lg={3} className="mb-4 mb-lg-0">
-              <h5>Our Services</h5>
-              <ul className="footer-links">
-                <li>
-                  <a href="#">Residential Electrical</a>
-                </li>
-                <li>
-                  <a href="#">Commercial Electrical</a>
-                </li>
-                <li>
-                  <a href="#">Industrial Installation</a>
-                </li>
-                <li>
-                  <a href="#">L.T./H.T. Work</a>
-                </li>
-                <li>
-                  <a href="#">M.S.E.D.C.L. Work</a>
-                </li>
-              </ul>
-            </Col>
-            <Col lg={3}>
-              <h5>Contact Info</h5>
-              <ul className="footer-contact">
-                <li>
-                  <span className="icon">📍</span>
-                  <span>
-                    Office no. 109 Boke Plaza, Nashik-Pune Road, Dwarka, Nashik
-                  </span>
-                </li>
-                <li>
-                  <span className="icon">📱</span>
-                  <span>7875688111</span>
-                </li>
-                <li>
-                  <span className="icon">✉️</span>
-                  <span>dilipdharak@gmail.com</span>
-                </li>
-              </ul>
-            </Col>
-          </Row>
-          <hr />
-          <div className="footer-bottom">
-            <p>© 2025 Dilip Electrical & Contractor. All Rights Reserved.</p>
-            <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-            </div>
-          </div>
-        </Container>
-      </footer>
+      
 
       <a href="#home" className={`back-to-top ${scrolled ? "visible" : ""}`}>
         <span>↑</span>

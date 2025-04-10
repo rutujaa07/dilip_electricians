@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 const Contact = () => {
-    const [isVisible, setIsVisible] = useState(false);
   
   return (
     <>
       <section id="contact" className="contact-section">
         <Container>
+        <h2>Get In Touch</h2>
+              
+                <p>Have a question or need a quote? Contact us today!</p>
+                
+
           <Row>
             <Col lg={6} className="mb-4 mb-lg-0">
               <div
-                className={`contact-info ${
-                  isVisible ? "slide-in-left visible" : "slide-in-left"
-                }`}
+                className="contact-info"
+                 
               >
-                <h2>Get In Touch</h2>
-                <div className="section-underline"></div>
-                <p>Have a question or need a quote? Contact us today!</p>
-
+                
                 <div className="contact-details">
                   <div className="contact-item">
                     <div className="contact-icon">📍</div>
@@ -66,9 +66,8 @@ const Contact = () => {
             </Col>
             <Col lg={6}>
               <div
-                className={`contact-form-wrapper ${
-                  isVisible ? "slide-in-right visible" : "slide-in-right"
-                }`}
+                className="contact-form-wrapper"
+                  
               >
                 <div className="contact-form">
                   <h3>Request A Quote</h3>

@@ -35,7 +35,6 @@ const NavbarComponent = () => {
             <NavLink className="nav-link" to="/">Home</NavLink>
             <NavLink className="nav-link" to="/about">About Us</NavLink>
             <NavLink className="nav-link" to="/services">Services</NavLink>
-            <NavLink className="nav-link" to="/projects">Projects</NavLink>
             <NavLink className="nav-link nav-contact-btn" to="/contact">
               Contact Us
             </NavLink>

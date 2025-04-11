@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
 import AboutSection from "./aboutus";
 import Services from "../services/Services";
-import image from "../../assets/ee.jpg"
+import image from "../../assets/ee.jpg";
 import ContactForm from "../contact/Contact";
 import TestimonialSlider from "../testimonials/Testimonials";
 import { NavLink } from "react-router-dom";
@@ -105,7 +105,7 @@ function Home() {
   ];
 
   return (
-    <div className="App">
+    <div className="App" >
       <Navbar
         expand="lg"
         className={`fixed-top ${scrolled ? "navbar-scrolled" : ""}`}
@@ -121,12 +121,17 @@ function Home() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <NavLink className="nav-link"   to="/home">Home</NavLink>
-            
-              <NavLink className="nav-link" to="/about">About Us</NavLink>
-              <NavLink  className="nav-link" to="/services">Services</NavLink>
-              <NavLink className="nav-link" to="/projects">Projects</NavLink>
-              <NavLink  to="/contact" className="nav-contact-btn nav-link">
+              <NavLink className="nav-link" to="/home">
+                Home
+              </NavLink>
+
+              <NavLink className="nav-link" to="/about">
+                About Us
+              </NavLink>
+              <NavLink className="nav-link" to="/services">
+                Services
+              </NavLink>
+              <NavLink to="/contact" className="nav-contact-btn nav-link">
                 Contact Us
               </NavLink>
             </Nav>
@@ -137,9 +142,9 @@ function Home() {
       <header id="home" className="hero-section">
         <div className="hero-overlay"></div>
         <Container>
-          <Row className="align-items-center hero-content">
+          <Row className="align-items-center hero-contentt">
             <Col lg={7} className="hero-text">
-              <h1 className="hero-title animate-in">
+              <h1 className="hero-titlle animate-in">
                 Professional Electrical Solutions
               </h1>
               <p className="hero-subtitle animate-in-delay">
@@ -234,7 +239,6 @@ function Home() {
         </Container>
       </section>
 
-      
       <Services />
       <section id="projects" className="projects-section">
         <Container>
@@ -349,7 +353,6 @@ function Home() {
                   </div>
                 </div>
               </Col>
-              
             </Row>
           </div>
           <div className="text-center mt-5">
@@ -359,39 +362,11 @@ function Home() {
           </div>
         </Container>
       </section>
-        <div className=" quality-section">
-              <div className="quality-content">
-                <div className="quality-text">
-                  <h2 className="section-title">Our Quality Commitment</h2>
-                  <div className="quality-points">
-                    <div className="quality-point">
-                      <h3>Premium Materials</h3>
-                      <p>We use only ISI-certified cables, components, and accessories to ensure longevity and performance.</p>
-                    </div>
-                    <div className="quality-point">
-                      <h3>Expert Workmanship</h3>
-                      <p>Our technicians undergo rigorous training and certification to maintain the highest standards of installation.</p>
-                    </div>
-                    <div className="quality-point">
-                      <h3>Thorough Testing</h3>
-                      <p>Every connection, joint, and system undergoes comprehensive testing before commissioning.</p>
-                    </div>
-                    <div className="quality-point">
-                      <h3>Regulatory Compliance</h3>
-                      <p>All our work strictly adheres to the latest electrical codes and safety regulations.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="quality-image-container">
-                  <img src={image} alt="Quality inspection" className="quality-image" />
-                </div>
-              </div>
-            </div>
-      <TestimonialSlider />
- {/* NEW SECTION: Certifications */}
-    <Certificates/>
-      {/* <ContactForm/> */}
      
+      <TestimonialSlider />
+      {/* NEW SECTION: Certifications */}
+      <Certificates />
+      {/* <ContactForm/> */}
 
       <div className="cta-section">
         <Container>
@@ -408,8 +383,6 @@ function Home() {
           </Row>
         </Container>
       </div>
-
-      
 
       <a href="#home" className={`back-to-top ${scrolled ? "visible" : ""}`}>
         <span>↑</span>

@@ -362,10 +362,10 @@ function Home() {
           </div>
         </Container>
       </section>
-     
+      <Certificates />
       <TestimonialSlider />
       {/* NEW SECTION: Certifications */}
-      <Certificates />
+      
       {/* <ContactForm/> */}
 
       <div className="cta-section">

@@ -158,11 +158,11 @@ function Home() {
                 <Button variant="outline-light">Our Services</Button>
               </div>
             </Col>
-            <Col lg={5} className="hero-image-container d-none d-lg-block">
+            {/* <Col lg={5} className="hero-image-container d-none d-lg-block">
               <div className="hero-image animate-float">
                 <div className="circuit-pattern"></div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
         <div className="hero-wave"></div>
@@ -275,7 +275,7 @@ function Home() {
                   }`}
                   style={{ animationDelay: "0.2s" }}
                 >
-                  <div className="project-image project-2"></div>
+                  <div className="project-image project-1"></div>
                   <div className="project-overlay">
                     <h3 className="mb-4">Industrial L.T./H.T. Installation</h3>
                     <p>Transformer Installation & Power Distribution</p>
@@ -326,7 +326,7 @@ function Home() {
                   }`}
                   style={{ animationDelay: "0.3s" }}
                 >
-                  <div className="project-image project-3"></div>
+                  <div className="project-image project-4"></div>
                   <div className="project-overlay">
                     <h3 className="mb-4">Residential Upgrade</h3>
                     <p>Complete home rewiring and panel upgrade</p>
@@ -343,7 +343,7 @@ function Home() {
                   }`}
                   style={{ animationDelay: "0.3s" }}
                 >
-                  <div className="project-image project-3"></div>
+                  <div className="project-image project-5"></div>
                   <div className="project-overlay">
                     <h3 className="mb-4">Residential Upgrade</h3>
                     <p>Complete home rewiring and panel upgrade</p>

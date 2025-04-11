@@ -25,7 +25,7 @@ const Contact = () => {
                     <div>
                       <h4>Office Address</h4>
                       <p>
-                        Office no. 109 Boke Plaza, Nashik-Pune Road, Dwarka,
+                        Office no. 109 Bodke Plaza, Nashik-Pune Road, Dwarka,
                         Nashik, Maharashtra, Pin 422011
                       </p>
                     </div>

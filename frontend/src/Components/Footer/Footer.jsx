@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
+
 import {
   Container,
  
@@ -27,10 +31,12 @@ function Footer() {
                 quality electrical services since 2010.
               </p>
               <div className="footer-social mt-4">
-                <a href="#">f</a>
-                <a href="#">i</a>
-                <a href="#">l</a>
-                <a href="#">w</a>
+                <a href="#"><FaInstagram /></a>
+                <a href="#"><FaFacebookF />
+</a><a href="#"><RiTwitterXLine />
+
+</a>
+               
               </div>
             </Col>
             <Col sm={6} lg={2} className="mb-4 mb-lg-0">
@@ -79,7 +85,7 @@ function Footer() {
                 <li>
                   <span className="icon">📍</span>
                   <span>
-                    Office no. 109 Boke Plaza, Nashik-Pune Road, Dwarka, Nashik
+                    Office no. 109 Bodke Plaza, Nashik-Pune Road, Dwarka, Nashik
                   </span>
                 </li>
                 <li>

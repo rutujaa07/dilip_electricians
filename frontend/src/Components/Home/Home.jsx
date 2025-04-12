@@ -5,17 +5,13 @@ import {
   Nav,
   Row,
   Col,
-  Card,
   Button,
-  Form,
-  Carousel,
+  
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
-import AboutSection from "./aboutus";
 import Services from "../services/Services";
-import image from "../../assets/ee.jpg";
-import ContactForm from "../contact/Contact";
+
 import TestimonialSlider from "../testimonials/Testimonials";
 import { NavLink } from "react-router-dom";
 import Certificates from "../certificates/Certificates";
@@ -180,7 +176,7 @@ function Home() {
               >
                 <div className="about-image">
                   <div className="experience-badge">
-                    <span className="years">15+</span>
+                    <span className="years">18+</span>
                     <span className="text">Years Experience</span>
                   </div>
                 </div>

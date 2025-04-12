@@ -6,9 +6,9 @@ import DilipElectricalServices from "./pages/sevicepage/servicepage";
 import NabarComponent from "./Components/navbar/navbar";
 import Contact from "./Components/contact/Contact";
 import ServicesPage from "./pages/sevicepage/servicepage";
-import AboutSection from "./Components/Home/aboutus";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./ScrollToTop";
+import AboutSection from "./pages/aboutuspage/aboutus";
 
 const App = () => {
   return (

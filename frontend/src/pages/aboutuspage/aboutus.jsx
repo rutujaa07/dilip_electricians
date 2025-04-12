@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./aboutus.css";
 import image from "../../assets/ee.jpg";
-import slider2 from "../../assets/slider2.jpg";
+import slider from "../../assets/slider.jpg";
 
 function AboutSection() {
   const features = [
@@ -18,7 +18,7 @@ function AboutSection() {
       <div
         className="services-hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(214, 201, 201, 0.7), rgba(109, 105, 105, 0.7)), url(${slider2})`,
+          backgroundImage: `linear-gradient(rgba(56, 56, 56, 0), rgba(49, 48, 48, 0.7)), url(${slider})`,
         }}
       >
         <div className="hero-content">

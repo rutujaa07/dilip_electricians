@@ -138,7 +138,7 @@ const ServicesSection = () => {
           
           <div className="stats-container">
             <div className="stat-item">
-              <span className="stat-number">500+</span>
+              <span className="stat-number">100+</span>
               <span className="stat-label">Projects Completed</span>
             </div>
             <div className="stat-item">
@@ -146,11 +146,11 @@ const ServicesSection = () => {
               <span className="stat-label">Team Members</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">15+</span>
+              <span className="stat-number">18+</span>
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">98%</span>
+              <span className="stat-number">100%</span>
               <span className="stat-label">Client Satisfaction</span>
             </div>
           </div>

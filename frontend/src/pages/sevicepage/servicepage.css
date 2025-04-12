@@ -1,3 +1,550 @@
+/* servicepage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #00a0e9;
+  --accent-color: #ffa500;
+  --text-color: #333;
+  --light-text: #f8f9fa;
+  --dark-bg: #1a1a2e;
+  --card-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: #f5f7fa;
+  line-height: 1.6;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Container */
+.serviceess-container {
+  margin-top: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 1rem;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+}
+
+/* Company Overview Section */
+.company-overview-section {
+  padding: 5rem 3rem;
+  background-color: #f0f4f8;
+}
+
+.overview-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.overview-image-container {
+  flex: 1 1 400px;
+  max-width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.overview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.overview-image-container:hover .overview-image {
+  transform: scale(1.05);
+}
+
+.overview-text {
+  flex: 1 1 500px;
+  padding: 2rem;
+}
+
+.overview-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.certification-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+}
+
+.cert-icon {
+  font-size: 1.2rem;
+}
+
+.cert-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+/* Safety Section */
+.safety-section {
+  padding: 5rem 3rem;
+  background-color: #f0f4f8;
+}
+
+.safety-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.safety-text {
+  flex: 1 1 400px;
+  padding: 2rem;
+}
+
+.safety-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.safety-text p {
+  margin-bottom: 1rem;
+}
+
+.safety-equipment-grid {
+  flex: 1 1 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.safety-equipment-card {
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.equipment-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.equipment-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.equipment-description {
+  font-size: 0.9rem;
+}
+
+/* Contact CTA Section (continued) */
+.contact-cta-section {
+  padding: 5rem 3rem;
+  background-image: url('../../assets/ee.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--light-text);
+}
+
+.cta-container p {
+  margin-bottom: 2rem;
+  color: var(--light-text);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #e69500;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .safety-content, .overview-content {
+    flex-direction: column;
+  }
+  
+  .overview-image-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-stats {
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    width: 150px;
+    height: 120px;
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .company-overview-section,
+  .core-services-section,
+  .safety-section,
+  .projects-section,
+  .client-section,
+  .contact-cta-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-card {
+    width: 200px;
+  }
+  
+  .client-logo-container {
+    width: 120px;
+  }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-container > div {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.services-container > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.services-container > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.services-container > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.services-container > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Hover Effects */
+.service-card:hover .service-image-placeholder,
+.project-card:hover .project-image-placeholder {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.client-logo-container:hover {
+  transform: translateY(-10px);
+}
+
+.client-logo-container:hover .client-logo-placeholder {
+  background-color: var(--accent-color);
+  transition: background-color 0.3s ease;
+}
+
+.safety-equipment-card:hover {
+  transform: translateY(-5px);
+}
+
+.safety-equipment-card:hover .equipment-icon {
+  color: var(--accent-color);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Additional Glass Effect Elements */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  margin: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.project-card .project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Adding depth to the glass cards */
+.glass-card {
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+  border-radius: 15px;
+}
+
+/* Fancy underlines for section titles */
+.fancy-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.fancy-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.fancy-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Adding these classes to apply to elements that need fancy hover effects */
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus styles for accessibility */
+button:focus, a:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Print styles for better document printing */
+@media print {
+  .services-container {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .glass-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    break-inside: avoid;
+  }
+  
+  .services-hero, .contact-cta-section {
+    display: none !important;
+  }
+}
 .servicess-container {
   margin: 0 auto;
   padding: 20px;
@@ -172,157 +719,12 @@
   line-height: 1.6;
 }
 
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
 
-.feature-icon {
-  margin-right: 10px;
-  color: #28a745;
-}
 
-.mt-2 {
-  margin-top: 8px;
-}
-
-.mt-3 {
-  margin-top: 16px;
-}
-
-/* New styles for added sections */
-
-/* Section styling */
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #333;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.section-title:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #0056b3;
-}
-
-.section-description {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Company Overview Section */
-.company-overview-section {
-  margin: 80px 0;
-  padding: 40px;
-  border-radius: 12px;
-}
-
-.overview-content {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.overview-image-container {
-  flex: 1;
-  max-width: 500px;
-}
-
-.overview-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.overview-text {
-  flex: 1;
-}
-
-.overview-text p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color: #555;
-}
-
-/* Client Section */
-.client-section {
-  margin: 80px 0;
-}
-
-.client-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.client-logo-container {
-  width: 150px;
-  text-align: center;
-}
-
-.client-logo-placeholder {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 10px;
-  background-color: #e9ecef;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #495057;
-}
-
-.client-name {
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center;
-}
-
-/* Responsive styles */
-@media (max-width: 992px) {
-  .overview-content,
-  .quality-content,
-  .coverage-content {
-    flex-direction: column;
-  }
-
-  .quality-points {
-    grid-template-columns: 1fr;
-  }
-
-  .equipment-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media (max-width: 768px) {
-  .equipment-gallery {
-    grid-template-columns: 1fr;
-  }
-
+  
   .servicessss-row {
     flex-direction: column;
   }
